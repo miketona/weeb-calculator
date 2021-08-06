@@ -12,22 +12,36 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
-    <!-- Tailwind Css library!-->
-    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <!-- <link href="/tailwind.css" rel="stylesheet"> -->
 
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
 
   <body>
 
-    <head>
-      <div id='headerDiv' class="flex  bg-black flex-col justify-center">
-        <div class='w-10/12	bg-blue-700 mx-auto	'>
+    <!-- <head>
+      <div id='headerDiv' class=" card-panel teal lighten-2 m2 z-depth-5">
+        <div class='white-text'>
           <h1 class='text-white leading-tight'>Weeb Calculator</h1>
-          <p class="text-white">How much of your life have you spent watching anime?</p>
+          <p class="grey-text text-lighten-4">How much of your life have you spent watching anime?</p>
         </div>
       </div>
-    </head>
+    </head> -->
+    <header>
+      <nav class=' teal lighten-2 m2'>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="/index.php" class="brand-logo">Weeb Calculator</a>
+          </div>
+        </div>
+      </nav>
+    </header>
   <?php
 }
