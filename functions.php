@@ -1,5 +1,5 @@
 <?php
-require_once './vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 //Makes connection with unofficial myanimelist api (https://api.jikan.moe) and returns the response
 function getUsersAnimeData($url)
@@ -18,10 +18,14 @@ function parseData($response)
     $animes = $response->anime;
     if (count($animes) < 1) return false;
     foreach ($animes as $anime) {
+        $id = $anime->mal_id;
         $title = $anime->title;
+        $url = $anime->url;
+        $img = $anime->image_url;
         $watchedEpisodes = $anime->watched_episodes;
+        $totalEpisodes = $anime->total_episodes;
         $totalWatchedEpisodes += $watchedEpisodes;
-        array_push($animeNames, $title);
+        array_push($animeNames, [$title, $id, $url, $img,  $watchedEpisodes, $totalEpisodes]);
     }
     $hours = 0;
     for ($i = 0; $i < $totalWatchedEpisodes; $i++) {
@@ -53,7 +57,5 @@ function calculateWeebness($username)
         $allAnimeNames = array_merge($allAnimeNames, $result[0]);
         $allAnimeHours += $result[1];
     }
-    echo $allAnimeHours;
+    return [[$allAnimeNames, $allAnimeHours]];
 }
-
-calculateWeebness("lazerbeem123456");

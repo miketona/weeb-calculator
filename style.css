@@ -1,0 +1,45 @@
+/*
+Color schemes:
+Main 
+color: #84C7C1
+
+Shades
+ #79B8B2
+color: #689E9A
+color: #4F7874
+color: #253837
+
+Alt:
+#A3F7C1
+#269188
+#F8669E
+#C46EBA
+
+*/
+.hide{
+    display:none;
+}
+body{
+    /* padding: 2% !important; */
+
+}
+main{
+    /* background-color: #5e35b1 ; */
+
+}
+body main #formContainer{
+    margin-bottom: 0px;
+}
+body #headerDiv{
+margin: 0px;
+}
+
+body main .card.horizontal{
+    position:absolute;
+}
+body .relative{
+    position:relative;
+}
+body .relative.card.horizontal{
+right:0;
+}
