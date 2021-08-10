@@ -19,14 +19,8 @@ getHeader();
                     Open
                 </label>
             </div>
-            <!-- <div class="container"> -->
-
             <div class="row">
-                <!-- <h2 class="header">Horizontal Card</h2> -->
                 <div class="card horizontal">
-                    <!-- <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                    </div> -->
                     <form id="singleUserForms" action="./modules/formHandler.php" method="get" class="hide col s12">
 
                         <div class="card-stacked">
@@ -58,13 +52,11 @@ getHeader();
 
                 </div>
             </div>
-
-
         </div>
-        <div class='col s12 m6'>
+        <div class='col s12 m6 specialCol'>
             <h3> Who is the bigger Weeb?</h3>
             <p>Type in two <a href="https://myanimelist.net/" target="_blank">myanimelist</a> usernames and find out who has spent more of their life watching Anime</p>
-            <div class="switch right">
+            <div class="switch specialRow">
                 <label>
                     Closed
                     <input id="formTwoLever" type="checkbox" onclick="isChecked('multiUserForms','formTwoLever')">
@@ -72,21 +64,19 @@ getHeader();
                     Open
                 </label>
             </div>
-            <!-- <div class="container"> -->
-
-            <div class="row right relative">
-                <!-- <h2 class="header">Horizontal Card</h2> -->
+            <div class="row specialRow">
                 <div class="card horizontal">
-                    <!-- <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                    </div> -->
                     <form id="multiUserForms" action="./modules/formHandler.php" method="get" class="hide col s12">
                         <div class="card-stacked">
                             <div class="card-content">
                                 <div class="row">
                                     <div class="input-field col s12 m12 l6">
-                                        <input required id="usernameOne" placeholder="myAnimeListUsername123" name="usernameOne" type="text" length="10">
-                                        <label for="usernameOne">Myanimelist Username: </label>
+                                        <input required id="usernameOne" placeholder="myAnimeListUsername123" name="usernameOne" type="text" length="90">
+                                        <label for="usernameOne">MyAnimeList Username: </label>
+                                    </div>
+                                    <div class="input-field col s12 m12 l6">
+                                        <input required id="usernameTwo" placeholder="myAnimeListUsername123" name="usernameTwo" type="text" length="90">
+                                        <label for="usernameTwo">Second MyAnimeList Username: </label>
                                     </div>
                                     <!-- Anime list option -->
                                     <div class="input-field col s12 m12 l6">
@@ -107,34 +97,9 @@ getHeader();
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
-
         </div>
-        <!-- </div> -->
-        <!-- <form action="#">
-            <p>
-                <input type="checkbox" id="test5" />
-                <label for="test5">Red</label>
-            </p>
-            <p>
-                <input type="checkbox" id="test6" checked="checked" />
-                <label for="test6">Yellow</label>
-            </p>
-            <p>
-                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-                <label for="filled-in-box">Filled in</label>
-            </p>
-            <p>
-                <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
-                <label for="test7">Green</label>
-            </p>
-            <p>
-                <input type="checkbox" id="test8" disabled="disabled" />
-                <label for="test8">Brown</label>
-            </p>
-        </form> -->
     </div>
 </main>
 <?php

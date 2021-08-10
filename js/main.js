@@ -20,3 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".parallax");
   var instances = M.Parallax.init(elems, 0);
 });
+
+//random anime quote generator
+document.querySelectorAll(".randomAnimeQuote").forEach((p) => {
+  fetch("https://animechan.vercel.app/api/random")
+    .then((response) => response.json())
+    .then(
+      (anime) =>
+        (p.innerHTML = `"${anime.quote}" - ${anime.character} (${anime.anime})`)
+    );
+});

@@ -19,14 +19,6 @@ Alt:
 .hide{
     display:none;
 }
-body{
-    /* padding: 2% !important; */
-
-}
-main{
-    /* background-color: #5e35b1 ; */
-
-}
 body main #formContainer{
     margin-bottom: 0px;
 }
@@ -34,12 +26,40 @@ body #headerDiv{
 margin: 0px;
 }
 
-body main .card.horizontal{
-    position:absolute;
+body   .collection .collection-item:last-child {
+    border-top: 1px solid #e0e0e0;
 }
 body .relative{
     position:relative;
 }
-body .relative.card.horizontal{
-right:0;
+
+.parallax-container{
+    min-height: 72%;
+}
+body > header > nav > div > div > a.brand-logo{
+    white-space: nowrap;
+} 
+
+/*no mobile*/
+@media only screen and (min-width: 600px)  {
+    body .relative.card.horizontal{
+    right:0;
+    }
+    body main .card.horizontal{
+        position:absolute;
+    }
+    body main .specialRow{
+        display:flex;
+        justify-content: flex-end;
+    }
+}
+/*Mobile only*/
+@media only screen and (max-width: 600px)  {
+    body .switch.right{
+        float: left !important;
+    }
+    body .row.right.relative{
+        float:left!important;
+    }
+
 }
